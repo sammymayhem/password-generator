@@ -16,19 +16,12 @@ function generatePassword() {
   var userLength = prompt("How many characters would you like your password to be?")
 
   if (userLength < 8 || userLength > 128) {
-    (password.length = userLength);
-  } else {
-    return;
-  }
-
+    alert("Password must be between 8 and 128 characters");
+    return "";
+  } 
+ 
   // Want to use lowercase letters?
-
-  var userLower = Math.floor(Math.random() * userChoice.alphaLower.length);
-
-  if ()
   
-
-
 
   return password;
 }
