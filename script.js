@@ -16,7 +16,7 @@ var letter = " ";
 
 
 function generatePassword() {
-  var password = "password";
+  var password = "";
   // TODO: add code to generate the password here
 
   // Length of password
@@ -55,6 +55,11 @@ function generatePassword() {
 
    if (includeNumber === true) {
      candidates = candidates + numbers;
+   }
+
+   // Randomize and output
+   for (var i = 0; i < length; i++) {
+     password = password + candidates[Math.floor(Math.random() * candidates.length)];
    }
 
 
