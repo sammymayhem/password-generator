@@ -8,10 +8,10 @@ var numbers = "0123456789";
 var symbols = "!@#$%^&*_-+=";
 var candidates = " ";
 var length = 0;
-var includeLower = false;
-var includeUpper = false;
-var includeSpecial = false;
-var includeNumber = false;
+// var includeLower = false;
+// var includeUpper = false;
+// var includeSpecial = false;
+// var includeNumber = false;
 var letter = " ";
 
 
@@ -41,7 +41,20 @@ function generatePassword() {
 
   if (includeUpper === true) {
      candidates = candidates + alphaUpper;
-     console.log(candidates);
+   }
+
+  // Want to use special characters? 
+   var includeSpecial = confirm("Would you like to use special characters?")
+
+   if (includeSpecial === true) {
+     candidates = candidates + symbols;
+   }
+
+   // Want to use Numbers?
+   var includeNumber = confirm("Would you like to inculde numbers?")
+
+   if (includeNumber === true) {
+     candidates = candidates + numbers;
    }
 
 
