@@ -27,17 +27,22 @@ function generatePassword() {
     return " ";
   } else {
     length = userLength;
-    console.log(length);
   }
-
 
   // Want to use lowercase letters?
-  var includeLower = confirm("Would you like to use lower case letters?")
+ var includeLower = confirm("Would you like to use lower case letters?")
 
   if (includeLower === true) {
-    candidates = alphaLower;
-    console.log(candidates);
+    candidates = candidates + alphaLower;
   }
+
+  // Want to use uppercase letters?
+  var includeUpper = confirm("Would you like to use lower case letters?")
+
+  if (includeUpper === true) {
+     candidates = candidates + alphaUpper;
+     console.log(candidates);
+   }
 
 
 
