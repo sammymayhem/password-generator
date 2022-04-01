@@ -12,7 +12,7 @@ var length = 0;
 // var includeUpper = false;
 // var includeSpecial = false;
 // var includeNumber = false;
-var letter = " ";
+
 
 
 function generatePassword() {
@@ -37,7 +37,7 @@ function generatePassword() {
   }
 
   // Want to use uppercase letters?
-  var includeUpper = confirm("Would you like to use lower case letters?")
+  var includeUpper = confirm("Would you like to use upper case letters?")
 
   if (includeUpper === true) {
      candidates = candidates + alphaUpper;
@@ -67,7 +67,6 @@ function generatePassword() {
    for (var i = 0; i < length; i++) {
      password = password + candidates[Math.floor(Math.random() * candidates.length)];
    }
-
 
 
   return password;
