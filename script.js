@@ -6,7 +6,7 @@ var alphaLower = "abcdefghijklmnopqrstuvwxyz";
 var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*_-+=";
-var candidates = " ";
+var candidates = "";
 var length = 0;
 // var includeLower = false;
 // var includeUpper = false;
@@ -56,6 +56,12 @@ function generatePassword() {
    if (includeNumber === true) {
      candidates = candidates + numbers;
    }
+
+   // If they choose nothing
+   if (candidates === "") {
+     alert("You must at least choose one option.");
+   }
+
 
    // Randomize and output
    for (var i = 0; i < length; i++) {
